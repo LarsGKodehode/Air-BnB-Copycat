@@ -1,7 +1,16 @@
 // Component style
 import styles from './ContentCard.module.css';
 
-function ContentCard(props: object) {
+interface CardInfo {
+  URL: string ,
+  URLTitle: string,
+  title: string,
+  info: string,
+  imageURL: string,
+};
+
+
+function ContentCard(props: CardInfo) {
   const {URL, URLTitle, title, info, imageURL} = props;
 
   return(
