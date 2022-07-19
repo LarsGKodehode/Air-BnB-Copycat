@@ -2,10 +2,9 @@
   /* Main color */
   background-color: brown;
 
-  
-}
+  /* Form */
+  padding: var(--spacing-tiny);
 
-.card-container {
   /* Content display */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
