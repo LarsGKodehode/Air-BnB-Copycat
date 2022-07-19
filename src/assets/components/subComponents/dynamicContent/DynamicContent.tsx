@@ -7,38 +7,36 @@ import React from 'react';
 // Component style
 import styles from './DynamicContent.module.css';
 
-// Hardcoded card details
-interface CardInfo {
-  URL: string ,
-  URLTitle: string,
-  title: string,
-  info: string,
-  imageURL: string,
-};
-
-const cardInfo: CardInfo = {
-  URL: `https://www.nostandards.com`,
-  URLTitle: `Happy Life`,
-  title: `This is a card`,
-  info: `All the info you never asked for`,
-  imageURL: `www.pics4life.no`,
-};
-
-
 /**
  * Generates a variable amount of info cards
  * @param amount number of cards to return
  * @returns JSX
  */
 function populateWithCards(amount: number) {
+  // Hardcoded card details
+  interface CardInfo {
+    URL: string ,
+    URLTitle: string,
+    title: string,
+    info: string,
+    imageURL: string,
+  };
+
+  const cardInfo: CardInfo = {
+    URL: `https://www.nostandards.com`,
+    URLTitle: `Happy Life`,
+    title: `This is a card`,
+    info: `All the info you never asked for`,
+    imageURL: `www.pics4life.no`,
+  };
+
   // store return list
-  const listScaffold = [...Array(amount).keys()];
-
+  let list: object[] = [];
   // populate list
-  const list = listScaffold.map((i) => {
-    return ContentCard(cardInfo);
-  });
-
+  for(let i = 0; i < amount; i++) {
+    list.push(ContentCard(cardInfo))
+  };
+  
   // return
   return list;
 };
