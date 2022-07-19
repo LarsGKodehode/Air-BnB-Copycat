@@ -6,7 +6,7 @@ function ContentCard(props: object) {
 
   return(
     <div className={styles['content-card-wrapper']}>
-      <h1>{title}</h1>
+      <h3>{title}</h3>
       <p>{info}</p>
       <a href={URL}>{URLTitle}</a>
     </div>
