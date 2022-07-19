@@ -1,0 +1,9 @@
+.main-content-wrapper {
+  /* main color */
+  background-color: var(--palette-tertiary-500);
+  color: var(--palette-tertiary-500-text);
+
+  /* form */
+  padding: var(--spacing-tiny) var(--spacing-tiny);
+  flex-grow: 2;
+};
