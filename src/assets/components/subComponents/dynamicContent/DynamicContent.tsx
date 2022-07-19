@@ -12,7 +12,7 @@ import styles from './DynamicContent.module.css';
  * @param amount number of cards to return
  * @returns JSX
  */
-function populateWithCards(amount: number) {
+function populateWithCards<T>(amount: number): React.ReactNode[] {
   // Hardcoded card details
   interface CardInfo {
     URL: string ,
@@ -31,14 +31,14 @@ function populateWithCards(amount: number) {
   };
 
   // store return list
-  let list: object[] = [];
+  let nodeArray: React.ReactNode[] = [];
   // populate list
   for(let i = 0; i < amount; i++) {
-    list.push(ContentCard(cardInfo))
+    nodeArray.push(ContentCard(cardInfo))
   };
-  
+
   // return
-  return list;
+  return nodeArray;
 };
 
 
@@ -46,11 +46,9 @@ function populateWithCards(amount: number) {
 // COMPONENT
 function DynamicContent() {
   return(
-    <div className={styles['dynamic-content-wrapper']}>
-      <ul className={styles['card-container']}>
-        {React.Children.toArray(populateWithCards(5))}
-      </ul>
-    </div>
+    <ul className={styles['dynamic-content-wrapper']}>
+      {React.Children.toArray(populateWithCards(5))}
+    </ul>
   );
 };
 
