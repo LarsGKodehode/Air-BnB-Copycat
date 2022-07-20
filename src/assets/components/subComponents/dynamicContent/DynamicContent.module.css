@@ -4,6 +4,10 @@
 
   /* Form */
   padding: var(--spacing-tiny);
+}
+
+.list-container {
+  padding: 0;
 
   /* Content display */
   display: grid;

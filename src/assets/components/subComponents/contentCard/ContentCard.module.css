@@ -1,3 +1,5 @@
-.content-card-wrapper {
+.content-card-container {
   background-color: azure;
+
+  padding: var(--spacing-small);
 }

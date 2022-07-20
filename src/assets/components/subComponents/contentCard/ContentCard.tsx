@@ -1,6 +1,7 @@
 // Component style
 import styles from './ContentCard.module.css';
 
+// Typescript temporary hack
 interface CardInfo {
   URL: string ,
   URLTitle: string,
@@ -9,16 +10,16 @@ interface CardInfo {
   imageURL: string,
 };
 
-
+// COMPONENT
 function ContentCard(props: CardInfo) {
   const {URL, URLTitle, title, info, imageURL} = props;
 
   return(
-    <div className={styles['content-card-wrapper']}>
+    <article className={styles['content-card-container']}>
       <h3>{title}</h3>
       <p>{info}</p>
       <a href={URL}>{URLTitle}</a>
-    </div>
+    </article>
   );
 };
 
