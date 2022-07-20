@@ -1,0 +1,6 @@
+.content-card-container {
+  /* Form */
+  padding: var(--spacing-small);
+
+  border-radius: 20px;
+}

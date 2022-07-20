@@ -1,0 +1,19 @@
+/**
+ * Apply as classname 
+ * creates a translucent effect with blur
+ * don't try figuring this out in here, use external tools
+ */
+.glass {
+  /* glassy gradients */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  linear-gradient(55deg, rgba(119, 69, 69, 0) 21.7%, rgba(196, 169, 169, 0.335) 45.34%, rgba(255, 254, 254, 0.335) 52.23%, rgba(196, 169, 169, 0.335) 58.64%, rgba(119, 69, 69, 0) 79.81%),
+  linear-gradient(154.39deg, rgba(255, 255, 255, 0.2) -0.28%, rgba(255, 255, 255, 0) 13.82%, rgba(255, 255, 255, 0) 76.5%, rgba(255, 255, 255, 0.2) 100%),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
+
+  /* blur effect */
+  /**
+   * this can be really expensive performance wise, depending on background(?)
+   * test on unit without discrete GPU
+   */
+  backdrop-filter: blur(8px);
+}
