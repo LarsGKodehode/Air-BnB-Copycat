@@ -6,9 +6,20 @@ import DynamicContent from '../subComponents/dynamicContent/DynamicContent';
 import styles from './MainContent.module.css'
 
 function MainContent() {
+  // Typescript interface hackery, should be extracted to a seperate file
+  interface ImageInfo {
+    imageURL: string,
+    imageAlt: string,
+  };
+
+  const backgroundImage: ImageInfo = {
+    imageURL: './src/assets/images/industry-landscape.jpg',
+    imageAlt: 'Sunset over an industrial zone',
+  };
+
   return(
     <div className={styles['main-content-wrapper']}>
-      <Hero />
+      <Hero {...backgroundImage}/>
       <DynamicContent />
     </div>
   );

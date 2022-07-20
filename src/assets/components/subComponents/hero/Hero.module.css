@@ -1,3 +1,7 @@
 .hero-wrapper {
   background-color: aliceblue;
 }
+
+.image {
+  width: 100%;
+}
