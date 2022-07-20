@@ -1,0 +1,16 @@
+.dynamic-content-wrapper {
+  /* Main color */
+  background-color: brown;
+
+  /* Form */
+  padding: var(--spacing-tiny);
+}
+
+.list-container {
+  padding: 0;
+
+  /* Content display */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-tiny);
+}
