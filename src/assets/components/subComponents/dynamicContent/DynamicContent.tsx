@@ -2,7 +2,7 @@
 import ContentCard from '../contentCard/ContentCard';
 
 // React
-import React from 'react'; // Need access to <T>ReactNode & <T>ReactNode[]
+import React from 'react'; // Need access to React.Children.toArray()
 
 // Component style
 import styles from './DynamicContent.module.css';
