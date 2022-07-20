@@ -1,5 +1,6 @@
 .content-card-container {
-  background-color: azure;
-
+  /* Form */
   padding: var(--spacing-small);
+
+  border-radius: 20px;
 }
