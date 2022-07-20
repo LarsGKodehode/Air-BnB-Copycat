@@ -2,9 +2,13 @@ import styles from './Navbar.module.css';
 
 import logo from '/logo.svg';
 
-function Navbar() {
+function Navbar(props: object) {
   return(
-    <div className={styles['navbar-wrapper']}>
+    <div className={[
+      styles['navbar-wrapper'],
+      props.propClass
+      ].join(' ')}>
+
       {/* Main Logo */}
       <img className={styles['logo']} src={logo}/>
       <h3 className={styles['logo-title']}>Navbar</h3>

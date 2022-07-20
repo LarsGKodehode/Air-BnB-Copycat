@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar propClass="navbar"/>
       <MainContent />
       <Footer />
     </div>

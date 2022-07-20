@@ -4,4 +4,13 @@
 
   /* Temp fix to scale site to smaller devices */
   min-width: 410px;
+
+  /* Ensures navbar does not subseqent content */
+  padding-top: var(--spacing-medium);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
